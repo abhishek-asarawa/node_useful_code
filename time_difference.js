@@ -1,9 +1,9 @@
 /**
  * This function calculate time difference in current time and given timestamp and return a human readable difference
  * @param {timestamp} timestamp - timestamp in seconds
- * @returns {String} - Human readable time difference from current time
+ * @returns {String} Human readable time difference from current time
  */
-function secondsToStr(timestamp) {
+function timeDiffToStr(timestamp) {
     // TIP: to find current time in milliseconds, use:
     let current_time_milliseconds = new Date().getTime();
     let milliseconds = current_time_milliseconds - timestamp * 1000;
@@ -40,3 +40,5 @@ function secondsToStr(timestamp) {
     }
     return "just now"; //'just now' //or other string you like;
 }
+
+module.exports = timeDiffToStr;
